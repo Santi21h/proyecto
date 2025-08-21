@@ -1,0 +1,227 @@
+% Defining document class and basic settings
+\documentclass[11pt]{beamer}
+\usetheme{Warsaw}
+\usecolortheme{beaver}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{geometry}
+\geometry{verbose}
+\usepackage{noto}
+\setsansfont{Noto Sans}
+
+% Setting title, author, and date
+\title{Gestor de Gastos con Análisis Matricial}
+\subtitle{Uniendo Matemáticas, Álgebra y Programación}
+\author{Tu Nombre}
+\date{21 de agosto de 2025}
+
+% Customizing listing style for code
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny,
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    commentstyle=\color{gray}
+}
+
+% Starting document
+\begin{document}
+
+% Creating title slide
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% Creating agenda slide
+\begin{frame}{Agenda (15 minutos)}
+    \tableofcontents
+\end{frame}
+
+% Section: Introduction
+\section{Introducción}
+\begin{frame}{Introducción al Gestor de Gastos}
+    \begin{itemize}
+        \item \textbf{Objetivo}: Crear un sistema para gestionar gastos personales usando matrices
+        \item \textbf{Tiempo}: 15 minutos
+        \item \textbf{Enfoque}: Demostrar la integración de:
+        \begin{itemize}
+            \item Matemáticas (estadísticas)
+            \item Álgebra (operaciones matriciales)
+            \item Programación (Python con Tkinter)
+        \end{itemize}
+        \item \textbf{Núcleo}: Uso de matrices para análisis financiero
+    \end{itemize}
+\end{frame}
+
+% Section: Modules Overview
+\section{Módulos del Sistema}
+\begin{frame}{Módulos del Sistema}
+    \begin{columns}
+        \column{0.5\textwidth}
+        \begin{block}{Matemáticas}
+            \begin{itemize}
+                \item Media
+                \item Varianza
+                \item Desviación estándar
+                \item Correlación de Pearson
+            \end{itemize}
+        \end{block}
+        \column{0.5\textwidth}
+        \begin{block}{Álgebra}
+            \begin{itemize}
+                \item Creación de matrices
+                \item Suma de matrices
+                \item Multiplicación
+                \item Transposición
+                \item Matriz de covarianza
+            \end{itemize}
+        \end{block}
+    \end{columns}
+    \vspace{0.5cm}
+    \begin{block}{Programación}
+        \begin{itemize}
+            \item Interfaz gráfica con Tkinter
+            \item Gestión de datos con JSON
+            \item Estructura orientada a objetos
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+% Section: Core of the Presentation
+\section{Núcleo de la Presentación}
+\begin{frame}{Corazón del Sistema: Matrices}
+    \begin{center}
+        \begin{tikzpicture}
+            \node[fill=red!20, rounded corners, text width=8cm, align=center] 
+            {La matriz de gastos [12x8] es el núcleo que organiza los datos por meses y categorías, permitiendo análisis avanzados mediante operaciones matriciales.};
+        \end{tikzpicture}
+    \end{center}
+    \begin{itemize}
+        \item \textbf{Filas}: 12 meses
+        \item \textbf{Columnas}: 8 categorías (Comida, Transporte, etc.)
+        \item \textbf{Funcionalidad}: Base para todos los cálculos y visualizaciones
+    \end{itemize}
+\end{frame}
+
+% Section: Mathematical Applications
+\section{Aplicaciones Matemáticas}
+\begin{frame}{Matemáticas en el Código}
+    \begin{block}{Funciones Matemáticas}
+        \lstinputlisting[language=Python, firstline=60, lastline=79]{Gestor_Gastos.py}
+    \end{block}
+    \begin{itemize}
+        \item \textbf{Media}: Promedio de gastos por mes
+        \item \textbf{Varianza}: Dispersión de los gastos
+        \item \textbf{Desviación Estándar}: Variabilidad mensual
+        \item \textbf{Correlación}: Tendencias temporales
+    \end{itemize}
+    \begin{center}
+        \includegraphics[width=0.3\textwidth]{math_graph.png}
+    \end{center}
+\end{frame}
+
+% Section: Algebraic Applications
+\section{Aplicaciones Algebraicas}
+\begin{frame}{Álgebra en el Código}
+    \begin{block}{Operaciones Matriciales}
+        \lstinputlisting[language=Python, firstline=10, lastline=34]{Gestor_Gastos.py}
+    \end{block}
+    \begin{itemize}
+        \item \textbf{Creación}: Matriz de gastos [12x8]
+        \item \textbf{Suma}: Combinar matrices
+        \item \textbf{Multiplicación}: Transformaciones
+        \item \textbf{Transposición}: Análisis por categorías
+    \end{itemize}
+    \begin{center}
+        \[
+        \begin{bmatrix}
+            a_{11} & a_{12} \\
+            a_{21} & a_{22}
+        \end{bmatrix}
+        \times
+        \begin{bmatrix}
+            b_{11} & b_{12} \\
+            b_{21} & b_{22}
+        \end{bmatrix}
+        \]
+    \end{center}
+\end{frame}
+
+% Section: Programming Applications
+\section{Aplicaciones de Programación}
+\begin{frame}{Programación en el Código}
+    \begin{block}{Interfaz Gráfica}
+        \lstinputlisting[language=Python, firstline=183, lastline=198]{Gestor_Gastos.py}
+    \end{block}
+    \begin{itemize}
+        \item \textbf{Tkinter}: Interfaz gráfica interactiva
+        \item \textbf{JSON}: Persistencia de datos
+        \item \textbf{OOP}: Clases para modularidad
+    \end{itemize}
+    \begin{center}
+        \includegraphics[width=0.3\textwidth]{interface_screenshot.png}
+    \end{center}
+\end{frame}
+
+% Section: Graphical Representation
+\section{Representación Gráfica}
+\begin{frame}{Visualización de Matrices}
+    \begin{columns}
+        \column{0.5\textwidth}
+        \begin{block}{Matriz de Gastos}
+            \[
+            \begin{bmatrix}
+                \$100 & \$50 & \cdots \\
+                \$75 & \$30 & \cdots \\
+                \vdots & \vdots & \ddots
+            \end{bmatrix}
+            \]
+        \end{block}
+        \column{0.5\textwidth}
+        \begin{block}{Covarianza}
+            \[
+            \begin{bmatrix}
+                \sigma_{11} & \sigma_{12} \\
+                \sigma_{21} & \sigma_{22}
+            \end{bmatrix}
+            \]
+        \end{block}
+    \end{columns}
+    \begin{center}
+        \includegraphics[width=0.4\textwidth]{matrix_viz.png}
+    \end{center}
+    \begin{itemize}
+        \item Matrices visualizadas como tablas
+        \item Vectores como histogramas
+        \item Covarianza como mapa de calor
+    \end{itemize}
+\end{frame}
+
+% Section: Conclusion
+\section{Conclusión}
+\begin{frame}{Conclusión}
+    \begin{itemize}
+        \item \textbf{Matemáticas}: Proporcionan las bases estadísticas
+        \item \textbf{Álgebra}: Permite análisis matricial avanzado
+        \item \textbf{Programación}: Integra todo en una interfaz usable
+        \item \textbf{Núcleo}: La matriz de gastos organiza y habilita el análisis
+        \item \textbf{Impacto}: Herramienta práctica para finanzas personales
+    \end{itemize}
+    \begin{center}
+        \textbf{¡Matemáticas + Álgebra + Programación = Poderoso análisis financiero!}
+    \end{center}
+\end{frame}
+
+% Ending document
+\end{document}
+
